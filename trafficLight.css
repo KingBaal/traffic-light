@@ -1,0 +1,198 @@
+body {
+    font-family: Verdana;
+    font-size: 13px;
+    color: #333;
+    background: #f3f3f3;
+    text-align: center;
+}
+
+/* cgange suit */
+.change-traffic-light-photo-headline-span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* traffic light menu  */
+.traffic-light-menu-wrapper-div {
+    background: #B0C4DE;
+    width: 32vw;
+    margin: auto;
+    border: solid #000000 3px;
+    border-radius: 8px;
+    -webkit-user-select: none
+}
+
+.traffic-light-menu-div {
+    margin: 10px;
+}
+
+.traffic-light-timer-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.traffic-light-timer-span {
+    font-size: 16px;
+    text-align: left;
+    width: 19vw;
+}
+
+.traffic-light-timer-input {
+    width: 4vw;
+}
+
+.color-red {
+    color: red;
+    font-weight: bold;
+}
+
+.color-yellow {
+    color: yellow;
+    font-weight: bold;
+}
+
+.color-green {
+    color: green;
+    font-weight: bold;
+}
+
+.help-text, #traffic-light-select {
+    width: 7vw;
+}
+
+.choose-trafiic-light-photo-div {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.choose-trafiic-light-photo-label {
+    font-size: 16px;
+}
+
+/* traffic light */
+.traffic-light-div {
+    margin: 20px 0;
+}
+
+#traffic-light-photo {
+    background-image: url(img/1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 250px;
+    height: 345px;
+    position: absolute;
+}
+
+.traffic-light-flex-container {
+    display: flex;
+    justify-content: center;
+    height: 360px;
+}
+
+.traffic-light-flex-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main-light {
+    width: 85px;
+    height: 87px;
+    background-color: black;
+}
+
+.side-light {
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+/*btn decor*/
+.btn {
+    background: rgb(176, 196, 222);
+    text-decoration: none;
+    outline: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #000000;
+    color: #000000;
+    font-family: 'Montserrat', sans-serif; 
+    transition: .4s;
+    cursor: pointer;
+}
+
+.btn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0,0,0,0);
+    transition: .4s;
+}
+
+.btn:hover:after {
+    border-color: #000000;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+}
+
+.btn:disabled, .btn[disabled] {
+    background-color: #cccccc;
+    color: #666666;
+    cursor: default;
+}
+
+.btn:active {
+    background-color: rgb(255, 127, 144);
+}
+
+/* input help text */
+input:out-of-range + .help-text::before {
+    content: 'Out of range';
+}
+
+/* стиль для невалидных полей */
+input:invalid {
+    border-color: #900;
+    background-color: #FDD;
+    box-shadow: 0 0 5px 1px red;
+
+}
+  
+input:focus:invalid {
+    outline: none;
+}
+  
+input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+}
+
+/* traffics  */
+.png1 .traffic-light-flex-block {
+    margin: 19px 0;
+}
+
+.png2 .traffic-light-flex-block {
+    margin: 48px 0;
+}
+
+.png2 .side-light {
+    width: 60px;
+    height: 60px;
+}
+
+.png2 .traffic-light-flex-block:nth-child(3) {
+    margin-left: 15px;
+    margin-right: 15px;
+}

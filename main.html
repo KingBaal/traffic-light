@@ -1,0 +1,82 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+     <script src="trafficLight2.0.js" defer></script>
+     <link rel="stylesheet" href="trafficLight.css">
+</head>
+
+<body>
+     <div class="traffic-light-menu-wrapper-div">
+          <div class="traffic-light-menu-div">
+               <div class="traffic-light-timers-div">
+                    <div class="traffic-light-timer-div">
+                         <span class="traffic-light-timer-span">How many sec 
+                              <span class="color-red">red</span> 
+                              light on:</span>
+                         <input type="number" min="1" max="60" required value="1"  
+                         class="traffic-light-timer-input" id="red-light-timer-input">
+                         <span class="help-text"></span>
+                    </div>
+                    <div class="traffic-light-timer-div">
+                         <span class="traffic-light-timer-span">How many sec 
+                              <span class="color-yellow">yellow</span> 
+                              light on:</span>
+                         <input type="number" min="1" max="60" required value="1" 
+                         class="traffic-light-timer-input" id="yellow-light-timer-input">
+                         <span class="help-text"></span>
+                    </div>
+                    <div class="traffic-light-timer-div">
+                         <span class="traffic-light-timer-span">How many sec 
+                              <span class="color-green">green</span> 
+                              light on:</span>
+                         <input type="number" min="1" max="60" required value="1"
+                         class="traffic-light-timer-input" id="green-light-timer-input">
+                         <span class="help-text"></span>
+                    </div>
+               </div>
+               <div class="traffic-light-btns-div">
+                    <button id="start-light-btn" class="btn" value="disable">Start light</button>
+                    <button id="stop-light-btn" class="btn" value="disable" disabled>Stop light</button>
+               </div>
+               <div class="change-traffic-light-photo-div">
+                    <div class="change-traffic-light-photo-headline-div">
+                         <span class="change-traffic-light-photo-headline-span">Whanna change your suit?</span>
+                    </div>
+                    <div class="choose-trafiic-light-photo-div">
+                         <label for="traffic-light-select" class="choose-trafiic-light-photo-label">Choose a traffic light:</label>
+                         <select id="traffic-light-select">
+                         <option value="main">Main</option>
+                         <option value="another">Another</option>
+                         </select>
+                    </div>
+               </div>
+          </div>
+     </div>
+
+     <div class="traffic-light-div">
+          <div class="traffic-light-flex-container png1">
+               <div id="traffic-light-photo">
+               </div>
+
+               <div class="traffic-light-flex-block">
+                    <div id="red-light-div-left" class="side-light" ></div>
+                    <div id="yellow-light-div-left" class="side-light"></div>
+                    <div id="green-light-div-left" class="side-light"></div>
+               </div>
+               <div class="traffic-light-flex-block">
+                    <div id="red-light-div-center" class="main-light"></div>
+                    <div id="yellow-light-div-center" class="main-light"></div>
+                    <div id="green-light-div-center" class="main-light"></div>
+               </div>
+               <div class="traffic-light-flex-block">
+                    <div id="red-light-div-right" class="side-light" ></div>
+                    <div id="yellow-light-div-right" class="side-light"></div>
+                    <div id="green-light-div-right" class="side-light"></div>
+               </div>
+          </div>
+     </div>
+
+</body>
+</html>
