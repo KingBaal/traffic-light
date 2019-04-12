@@ -38,7 +38,7 @@ body {
     width: 19vw;
 }
 
-.traffic-light-timer-input {
+.input {
     width: 4vw;
 }
 
@@ -98,13 +98,13 @@ body {
     justify-content: space-around;
 }
 
-.main-light {
+.center-circle {
     width: 85px;
     height: 87px;
     background-color: black;
 }
 
-.side-light {
+.left-circle, .right-circle {
     width: 70px;
     height: 70px;
     background-color: black;
@@ -187,7 +187,7 @@ input[type=number]::-webkit-inner-spin-button {
     margin: 48px 0;
 }
 
-.png2 .side-light {
+.png2 .right-circle, .png2 .left-circle {
     width: 60px;
     height: 60px;
 }

@@ -1,26 +1,26 @@
-let inputs = {
-    redLightInput: document.querySelector('.traffic-light-menu-div #red-light-timer-input'),
-    yellowLightInput: document.querySelector('.traffic-light-menu-div #yellow-light-timer-input'),
-    greenLightInput: document.querySelector('.traffic-light-menu-div #green-light-timer-input')
+const inputs = {
+    redLightInput: document.querySelector('.traffic-light-menu-div .red-light-timer-input'),
+    yellowLightInput: document.querySelector('.traffic-light-menu-div .yellow-light-timer-input'),
+    greenLightInput: document.querySelector('.traffic-light-menu-div .green-light-timer-input')
 };
 
-let btns = {
-    startLightBtn: document.querySelector('.traffic-light-menu-div #start-light-btn'),
-    stopLightBtn: document.querySelector('.traffic-light-menu-div #stop-light-btn')
+const btns = {
+    startLightBtn: document.querySelector('.traffic-light-menu-div .start-light-btn'),
+    stopLightBtn: document.querySelector('.traffic-light-menu-div .stop-light-btn')
 };
 
-let lightDivs = {
-    redLightDivLeft: document.querySelector('.traffic-light-div #red-light-div-left'),
-    yellowLightDivLeft: document.querySelector('.traffic-light-div #yellow-light-div-left'),
-    greenLightDivLeft: document.querySelector('.traffic-light-div #green-light-div-left'),
+const lightDivs = {
+    redLightDivLeft: document.querySelector('.traffic-light-div .left-part .red-circle'),
+    yellowLightDivLeft: document.querySelector('.traffic-light-div .left-part .yellow-circle'),
+    greenLightDivLeft: document.querySelector('.traffic-light-div .left-part .green-circle'),
     
-    redLightDivCenter: document.querySelector('.traffic-light-div #red-light-div-center'),
-    yellowLightDivCenter: document.querySelector('.traffic-light-div #yellow-light-div-center'),
-    greenLightDivCenter: document.querySelector('.traffic-light-div #green-light-div-center'),
+    redLightDivCenter: document.querySelector('.traffic-light-div .center-part .red-circle'),
+    yellowLightDivCenter: document.querySelector('.traffic-light-div .center-part .yellow-circle'),
+    greenLightDivCenter: document.querySelector('.traffic-light-div .center-part .green-circle'),
     
-    redLightDivRight: document.querySelector('.traffic-light-div #red-light-div-right'),
-    yellowLightDivRight: document.querySelector('.traffic-light-div #yellow-light-div-right'),
-    greenLightDivRight: document.querySelector('.traffic-light-div #green-light-div-right')
+    redLightDivRight: document.querySelector('.traffic-light-div .right-part .red-circle'),
+    yellowLightDivRight: document.querySelector('.traffic-light-div .right-part .yellow-circle'),
+    greenLightDivRight: document.querySelector('.traffic-light-div .right-part .green-circle')
 };
 
 const enterKey = 13;
@@ -42,7 +42,7 @@ inputs.greenLightInput.addEventListener('input', checkLightInputValidity);
 
 window.addEventListener('keydown', onKeyDown);
 
-trafficLightSelect.addEventListener('change', (event) => {
+trafficLightSelect.addEventListener('change', event => {
     const {value} = event.target;
     if (value === 'another') {
         trafiicLightImg.style.backgroundImage = 'url(img/2.png)'; 
@@ -55,38 +55,42 @@ trafficLightSelect.addEventListener('change', (event) => {
     }
 });
 
+function setElementBackgroundColor(element, color) {
+    element.style.backgroundColor = color;
+}
+
 function redLightOn() {
-    lightDivs.redLightDivCenter.style.backgroundColor = 'red';
-    lightDivs.greenLightDivRight.style.backgroundColor = 'green';
-    lightDivs.greenLightDivLeft.style.backgroundColor = 'green';
+    setElementBackgroundColor(lightDivs.redLightDivCenter, 'red');
+    setElementBackgroundColor(lightDivs.greenLightDivRight, 'green');
+    setElementBackgroundColor(lightDivs.greenLightDivLeft, 'green');
     currentTimeout = setTimeout(function() {
-        lightDivs.redLightDivCenter.style.backgroundColor = 'black';
-        lightDivs.greenLightDivRight.style.backgroundColor = 'black';
-        lightDivs.greenLightDivLeft.style.backgroundColor = 'black';
+        setElementBackgroundColor(lightDivs.redLightDivCenter, 'black');
+        setElementBackgroundColor(lightDivs.greenLightDivRight, 'black');
+        setElementBackgroundColor(lightDivs.greenLightDivLeft, 'black');
         yellowLightOn('red');
     }, redLightTime * 1000);    
 }
 
 function yellowLightOn(previusColor) {
-    lightDivs.yellowLightDivCenter.style.backgroundColor = 'yellow';
-    lightDivs.yellowLightDivRight.style.backgroundColor = 'yellow';
-    lightDivs.yellowLightDivLeft.style.backgroundColor = 'yellow';
+    setElementBackgroundColor(lightDivs.yellowLightDivCenter, 'yellow');
+    setElementBackgroundColor(lightDivs.yellowLightDivRight, 'yellow');
+    setElementBackgroundColor(lightDivs.yellowLightDivLeft, 'yellow');
     currentTimeout = setTimeout(function() {
-        lightDivs.yellowLightDivCenter.style.backgroundColor = 'black';
-        lightDivs.yellowLightDivRight.style.backgroundColor = 'black';
-        lightDivs.yellowLightDivLeft.style.backgroundColor = 'black';
+        setElementBackgroundColor(lightDivs.yellowLightDivCenter, 'black');
+        setElementBackgroundColor(lightDivs.yellowLightDivRight, 'black');
+        setElementBackgroundColor(lightDivs.yellowLightDivLeft, 'black');
         previusColor === 'red' ? greenLightOn() : redLightOn();
     }, yellowLightTime * 1000);
 }
 
 function greenLightOn() {
-    lightDivs.greenLightDivCenter.style.backgroundColor = 'green';
-    lightDivs.redLightDivRight.style.backgroundColor = 'red';
-    lightDivs.redLightDivLeft.style.backgroundColor = 'red';
+    setElementBackgroundColor(lightDivs.greenLightDivCenter, 'green');
+    setElementBackgroundColor(lightDivs.redLightDivRight, 'red');
+    setElementBackgroundColor(lightDivs.redLightDivLeft, 'red');
     currentTimeout = setTimeout(function() {
-        lightDivs.greenLightDivCenter.style.backgroundColor = 'black';
-        lightDivs.redLightDivRight.style.backgroundColor = 'black';
-        lightDivs.redLightDivLeft.style.backgroundColor = 'black';
+        setElementBackgroundColor(lightDivs.greenLightDivCenter, 'black');
+        setElementBackgroundColor(lightDivs.redLightDivRight, 'black');
+        setElementBackgroundColor(lightDivs.redLightDivLeft, 'black');
         yellowLightOn('green');
     }, greenLightTime * 1000);
 }

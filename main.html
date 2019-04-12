@@ -16,7 +16,7 @@
                               <span class="color-red">red</span> 
                               light on:</span>
                          <input type="number" min="1" max="60" required value="1"  
-                         class="traffic-light-timer-input" id="red-light-timer-input">
+                         class="input red-light-timer-input">
                          <span class="help-text"></span>
                     </div>
                     <div class="traffic-light-timer-div">
@@ -24,7 +24,7 @@
                               <span class="color-yellow">yellow</span> 
                               light on:</span>
                          <input type="number" min="1" max="60" required value="1" 
-                         class="traffic-light-timer-input" id="yellow-light-timer-input">
+                         class="input yellow-light-timer-input">
                          <span class="help-text"></span>
                     </div>
                     <div class="traffic-light-timer-div">
@@ -32,13 +32,13 @@
                               <span class="color-green">green</span> 
                               light on:</span>
                          <input type="number" min="1" max="60" required value="1"
-                         class="traffic-light-timer-input" id="green-light-timer-input">
+                         class="input green-light-timer-input">
                          <span class="help-text"></span>
                     </div>
                </div>
                <div class="traffic-light-btns-div">
-                    <button id="start-light-btn" class="btn" value="disable">Start light</button>
-                    <button id="stop-light-btn" class="btn" value="disable" disabled>Stop light</button>
+                    <button class="btn start-light-btn" value="disable">Start light</button>
+                    <button class="btn stop-light-btn" value="disable" disabled>Stop light</button>
                </div>
                <div class="change-traffic-light-photo-div">
                     <div class="change-traffic-light-photo-headline-div">
@@ -60,20 +60,20 @@
                <div id="traffic-light-photo">
                </div>
 
-               <div class="traffic-light-flex-block">
-                    <div id="red-light-div-left" class="side-light" ></div>
-                    <div id="yellow-light-div-left" class="side-light"></div>
-                    <div id="green-light-div-left" class="side-light"></div>
+               <div class="traffic-light-flex-block left-part">
+                    <div class="left-circle red-circle" ></div>
+                    <div class="left-circle yellow-circle"></div>
+                    <div class="left-circle green-circle"></div>
                </div>
-               <div class="traffic-light-flex-block">
-                    <div id="red-light-div-center" class="main-light"></div>
-                    <div id="yellow-light-div-center" class="main-light"></div>
-                    <div id="green-light-div-center" class="main-light"></div>
+               <div class="traffic-light-flex-block center-part">
+                    <div class="center-circle red-circle"></div>
+                    <div class="center-circle yellow-circle"></div>
+                    <div class="center-circle green-circle"></div>
                </div>
-               <div class="traffic-light-flex-block">
-                    <div id="red-light-div-right" class="side-light" ></div>
-                    <div id="yellow-light-div-right" class="side-light"></div>
-                    <div id="green-light-div-right" class="side-light"></div>
+               <div class="traffic-light-flex-block right-part">
+                    <div class="right-circle red-circle" ></div>
+                    <div class="right-circle yellow-circle"></div>
+                    <div class="right-circle green-circle"></div>
                </div>
           </div>
      </div>
