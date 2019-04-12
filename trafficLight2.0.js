@@ -29,9 +29,10 @@ const escapeKey = 27;
 let currentTimeout;
 let greenLightTime, yellowLightTime, redLightTime;
 
-let trafiicLightImg = document.getElementById('traffic-light-photo');             //for changing traffic light img
-let trafficLightSelect = document.getElementById('traffic-light-select');         //for changing traffic light img
-let trafficLightWrapper = document.querySelector('.traffic-light-flex-container');//for changing traffic light img
+//for changing traffic light img
+let trafiicLightImg = document.querySelector('.traffic-light-div .traffic-light-photo');
+let trafficLightSelect = document.querySelector('.traffic-light-menu-div .traffic-light-select');
+let trafficLightWrapper = document.querySelector('.traffic-light-flex-container');
 
 btns.startLightBtn.addEventListener('click', onStartLightBtnClick);
 btns.stopLightBtn.addEventListener('click', onStopLightBtnClick);
